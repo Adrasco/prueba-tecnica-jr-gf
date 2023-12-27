@@ -1,1 +1,31 @@
-<p>{{user!.id}}</p>
+<div class="position-absolute top-50 start-50 translate-middle">
+  <div class="card" style="width: 50rem;">
+    <div class="card-body">
+      <h5 class="card-title text-center">Bienvenido {{user?.firstName}} {{user?.lastName}}</h5>
+
+      <div class="container mt-4">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="card h-100">
+              <div class="card-body d-flex flex-column">
+                <p class="card-text">Usuario: {{user?.username}}</p>
+                <p class="card-text">Nombre: {{user?.firstName}} {{user?.lastName}}</p>
+                <p class="card-text">Email: {{user?.email}}</p>
+                <p class="card-text">Genero: {{user?.gender}}</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="card h-100">
+              <div class="card-body d-flex flex-column">
+                <img [src]=user?.image />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
